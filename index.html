@@ -44,50 +44,46 @@
 
         }
 
-	    .ad-banner {
-  position: fixed;
-  position-anchor: --myAnchor;
-  position-area: top;
-  width: 728px;
-  height: 90px;
-}
-}
-	    
-        .ad-banner {
-	  position: absolute;
-		 top: 15px;
-
-        }
-        .ad-banner a {
-            color: white;
-            text-decoration: none;
-	    
-        }
-
-.ad-overlay {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 300px;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	   /* Anchor Ad Container */
+        .anchor-ad {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
             text-align: center;
+            padding: 10px 0;
+            z-index: 9999;
         }
-        .close-btn {
-      
+        .anchor-ad a {
+            display: inline-block;
+            max-width: 728px; /* Standard AdSense banner size */
+            width: 100%;
+        }
+        .anchor-ad img {
+            width: 100%;
+            max-width: 728px; /* Adjust ad image size */
+            height: auto;
+            border-radius: 5px;
+        }
+        /* Close Button */
+        .close-ad {
+            position: absolute;
+            right: 10px;
             top: 5px;
-            right: 50px;
-            background: black;
+            background: red;
             color: white;
             border: none;
-            cursor: pointer;
             padding: 5px 10px;
-            font-size: 16px;
-            border-radius: 4px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .anchor-ad img {
+                max-width: 320px; /* Adjust for mobile */
+            }
+        }
         }
         video {
 
@@ -110,7 +106,24 @@
   
 
 
-
+<!-- Anchor Ad -->
+    <div class="anchor-ad" id="anchorAd">
+        <button class="close-ad" onclick="closeAd()">X</button>
+					           <script type="text/javascript">
+	atOptions = {
+		'key' : 'ee0492e584b92f8b359fd7dc1e7d2501',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//sparrowaboveaveragedefence.com/ee0492e584b92f8b359fd7dc1e7d2501/invoke.js"></script>
+	    
+        <a href="https://example.com" target="_blank">
+            <img src="https://your-username.github.io/repository-name/ad-image.jpg" alt="Advertisement">
+        </a>
+    </div>
 				    	
 
 <div class="ad-overlay" id="adOverlay">
