@@ -63,10 +63,18 @@
             text-decoration: none;
 	    
         }
-	    .ad-banner {
-		position: top;
-		    
-	    }
+
+	            .ad-banner {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 5px;
+            text-align: center;
+            border-radius: 5px;
+            display: block; /* Always visible until closed */
         .close-btn {
       
             top: 5px;
@@ -114,6 +122,9 @@
 </script>
 <script type="text/javascript" src="//sparrowaboveaveragedefence.com/ee0492e584b92f8b359fd7dc1e7d2501/invoke.js"></script>
 
+            <span class="close-btn" onclick="hideAd()">✖</span>
+            <a href="https://your-ad-link.com" target="_blank">
+                <img src="ad-banner.png" alt="Advertisement">
             </a>
         </div>
     </div>
