@@ -64,17 +64,19 @@
 	    
         }
 
-	            .ad-banner {
+.ad-overlay {
             position: absolute;
-            bottom: 10px;
+            top: 10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 250px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px;
+            width: 90%;
+            max-width: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-align: center;
-            border-radius: 5px;
-            display: block; /* Always visible until closed */
+        }
         .close-btn {
       
             top: 5px;
@@ -110,7 +112,7 @@
 
 
 				    	
- <div class="ad-banner" id="adBanner">	
+ <div class="ad-overlay" id="adOverlay">	
 						           <script type="text/javascript">
 	atOptions = {
 		'key' : 'ee0492e584b92f8b359fd7dc1e7d2501',
