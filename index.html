@@ -44,27 +44,26 @@
 
         }
 
-	   /* Anchor Ad Container */
+	 /* Anchor Ad Container */
         .anchor-ad {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.9);
             text-align: center;
-            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.9);
             z-index: 9999;
+            padding: 5px 0;
         }
-        .anchor-ad a {
+        .ad-wrapper {
             display: inline-block;
-            max-width: 728px; /* Standard AdSense banner size */
-            width: 50%;
-        }
-        .anchor-ad img {
+            max-width: 728px; /* Default desktop size */
             width: 100%;
-            max-width: 728px; /* Adjust ad image size */
-            height: auto;
-            border-radius: 5px;
+        }
+        iframe {
+            width: 100%;
+            height: 90px; /* Default height */
+            border: none;
         }
         /* Close Button */
         .close-ad {
@@ -80,10 +79,12 @@
             font-size: 14px;
         }
         @media (max-width: 768px) {
-            .anchor-ad img {
-                max-width: 320px; /* Adjust for mobile */
+            .ad-wrapper {
+                max-width: 320px; /* Mobile-friendly size */
             }
-        }
+            iframe {
+                height: 50px; /* Adjust height for smaller screens */
+            }
         }
         video {
 
